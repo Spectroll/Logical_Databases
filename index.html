@@ -17,18 +17,37 @@
 
     <div class="navigation">
         <nav>
-            <ul>
-                <li><a href="Pages/home.html" class="link-text">Home</a></li>
-                <li><a href="Pages/one-to-one.html">One to One</a></li>
-                <li><a href="Pages/one-to-many.html">One to Many</a></li>
-                <li><a href="Pages/many-to-many.html">Many to Many</a></li>
-                <li><a href="Pages/three-way.html">Three-Way Relationship</a></li>
+            <ul class="ext-nav">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                
+                <li>
+                    <a href="Pages/one-to-one.html">One to One</a>
+                    <ul class="int-nav">
+                        <li><a href="Pages/one-to-one_BothOptional.html">Both Optional</a></li>
+                        <li><a href="Pages/one-to-one_OneOptional.html">One Optional</a></li>
+                        <li><a href="Pages/one-to-one_BothMandatory.html">Both Mandatory</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="one-to-many.html">One to Many</a>
+                </li>
+
+                <li>
+                    <a href="many-to-many.html">Many to Many</a>
+                </li>
+
+                <li>
+                    <a href="three-way.html">Three-Way Relationship</a>
+                </li>
             </ul>
         </nav>
     </div>
 
     <main>
-        <div class="video">
+        <div>
             <video src="./Videos/Tutorial.mp4" width="1600" height="800" autoplay muted controls></video>
         </div>
     </main>

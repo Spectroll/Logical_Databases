@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../Styles/reset.css">
+    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Concepts - by UFABC</title>
+</head>
+<body>
+
+    <header>
+        <img src="../logo_ufabc.png" alt="Logo da UFABC" class="logo">
+        <h1 class="logicaldb">Logical Database Transformations</h1>
+    </header>
+
+    <div class="navigation">
+        <nav>
+            <ul class="ext-nav">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                
+                <li>
+                    <a href="one-to-one.html">One to One</a>
+                    <ul class="int-nav">
+                        <li><a href="one-to-one_BothOptional.html">Both Optional</a></li>
+                        <li><a href="one-to-one_OneOptional.html">One Optional</a></li>
+                        <li><a href="one-to-one_BothMandatory.html">Both Mandatory</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="one-to-many.html">One to Many</a>
+                </li>
+
+                <li>
+                    <a href="many-to-many.html">Many to Many</a>
+                </li>
+
+                <li>
+                    <a href="three-way.html">Three-Way Relationship</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+
+        <ul class="button_container">
+            <a href="one-to-one_BothOptional_EF.html" class="method_button">Entity Fusion</a>
+            <a href="one-to-one_BothOptional_AA.html" class="method_button">Attribute Adding</a>
+            <a href="one-to-one_BothOptional_NR.html" class="method_button">New Relation</a>
+        </ul>
+
+        <div>     
+            <script> 
+                function fadeIn(){ 
+                    let element = document.getElementsByClassName("method_button");
+                    let opacity = 0;
+                    let fadeIn = setInterval(() => {
+                        if (opacity >= 1) {
+                            clearInterval(fadeIn);
+                        }
+                        for(let i=0; i < element.length; i++){ element[i].style.opacity = opacity; }
+                        opacity += 0.01;
+                    }, 10);
+                }
+             </script>
+
+            <video class="video" onended="fadeIn()" src="../Videos/One To One/BothOptional/Introduction.mp4" width="1600" height="720" autoplay muted controls></video>
+        </div>
+
+        
+
+    </main>
+
+</body>
+</html>

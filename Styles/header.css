@@ -22,6 +22,15 @@ body {
     margin-left: 50px;
 }
 
+.logicaldb{
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin-left: 650px;
+}
+
 .navigation {
     width: 250px;
     float: left;
@@ -49,10 +58,35 @@ body {
     height: 100%;
 }
 
-.navigation ul li {
+.navigation .ext-nav > li {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 5rem;   
+    padding: 1.5rem 0;
+}
+
+.navigation .ext-nav > li:hover .int-nav{
+    display: flex;
+    visibility: visible;
+}
+
+.navigation .int-nav {
+    display: none;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    opacity: 1;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+.navigation .int-nav li{
+    padding: .5rem 0;
+}
+
+.navigation .int-nav li a{
+    font-size: smaller;
 }
 
 .navigation ul li a {
@@ -71,18 +105,85 @@ body {
     transition: 0.5s; /* Cor de fundo do botão ao passar o mouse */
 }
 
-.logicaldb{
-    color: white;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 48px;
-    font-weight: bold;
-    margin: auto;
-}
-
 main {
     padding: 0 15%;
     align-items: center;
+}
+
+.button_container{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.method_button{
+    opacity: 0;
+    margin-top: 20px;
+    margin-left: 220px;
+    padding: 10px 10px;
+    background-color: #006633;
+    color: #fff; 
+    border: 3px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.method_button:hover{
+    color: #FFCC00;
+    transition: 0.5s; /* Cor de fundo do botão ao passar o mouse */
+    transform: scale(1.1);
+}
+
+.produtos{
+    margin: 0 auto;
+    justify-content: center;
+    padding: 100px 0;
+    animation: fadein 3s;
+    display: flex;
+    gap: 20rem;
+    flex-direction: row;
+    margin-left: 250px;
+}
+
+.produtos a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    display: block;
+    
+}
+
+.produtos a:hover{
+    transition: 0.5s;
+    transform:  scale(1.2);
+    
+}
+
+.produtos h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 1em 0;
+    transition: 0.75s;
+    
+}
+
+.icon{
+    width: 200px;
+    transition: 0.75s;
+    margin: 100px 0;
+    scale: 2;
+}
+
+@keyframes slide{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 @media screen {
